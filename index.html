@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
-    <link  href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <li class="nav-item"><a href="#rooms" class="nav-link">Номера</a></li>
             <li class="nav-item"><a href="#feedbacks" class="nav-link">Отзывы</a></li>
             <li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
-            <li class="nav-item"><a href="tel:+78003335599" class="nav-link mobile-phone">8 (800) 333-55-99</a></li>
+            <li class="nav-item nav-item-phone"><a href="tel:+78003335599" class="nav-link mobile-phone">8 (800) 333-55-99</a></li>
         </ul>
         <button class="burger-btn" type="button">
             <span class="burger-line"></span>
@@ -73,50 +73,162 @@
         <section class="rooms" id="rooms">
             <h2 class="section-title">Номера</h2>
             <ul class="slider-rooms">
-                <li class="slider-rooms-items">
-                    <img class="slider-img" src="images/room1.jpg" alt="Эконом плюс">
+                <li class="slider-rooms-item slider-rooms-item-active">
+                    <picture>
+                        <source srcset="images/room1-desktop.jpg" width="600" height="404" media="(min-width: 1200px)">
+                        <img class="slider-img" src="images/room1.jpg" alt="Эконом плюс" width="290" height="192">
+                    </picture>
+                    <div class="room-description">
                     <h3 class="slider-title">Эконом плюс</h3>
                     <ul class="room-features">
-                        <li class="room-features-items">Площадь - 0,90 м2</li>
-                        <li class="room-features-items">Размеры (ШхГхВ)
+                        <li class="room-features-item">Площадь - 0,90 м2</li>
+                        <li class="room-features-item">Размеры (ШхГхВ)
                             90х100х180 см</li>
-                        <li class="room-features-items">Цена за сутки: 200₽</li>
+                        <li class="room-features-item">Цена за сутки: 200₽</li>
                     </ul>
                     <a href="catalog.html" class="button">Забронировать</a>
-              </li>      
-            
-            
-            <li class="slider-rooms-items">
-                <img class="slider-img" src="images/room2.jpg" alt="Комфорт">
-                <h3 class="slider-title">Комфорт</h3>
-                <ul class="room-features">
-                    <li class="room-features-items">Площадь - 1,13 м2</li>
-                    <li class="room-features-items">Размеры (ШхГхВ)
-                        100х125х180 см</li>
-                    <li class="room-features-items">Цена за сутки: 250₽</li>
-                </ul>
-                <a href="catalog.html" class="button">Забронировать</a>
-          </li> 
-          <li class="slider-rooms-items">
-            <img class="slider-img" src="images/room3.jpg" alt="Сьют">
-            <h3 class="slider-title">Сьют</h3>
-            <ul class="room-features">
-                <li class="room-features-items">Площадь - 1,56 м2</li>
-                <li class="room-features-items">Размеры (ШхГхВ)
-                    125х125х180 см</li>
-                <li class="room-features-items">Цена за сутки: 350₽</li>
+                    </div>
+                </li>
+
+                <li class="slider-rooms-item">
+                    <picture>
+                        <source srcset="images/room2-desktop.jpg" width="600" height="404" media="(min-width: 1200px)">
+                    <img class="slider-img" src="images/room2.jpg" alt="Комфорт" width="290" height="192">
+                    </picture>
+                    <div class="room-description">
+                    <h3 class="slider-title">Комфорт</h3>
+                    <ul class="room-features">
+                        <li class="room-features-item">Площадь - 1,13 м2</li>
+                        <li class="room-features-item">Размеры (ШхГхВ)
+                            100х125х180 см</li>
+                        <li class="room-features-item">Цена за сутки: 250₽</li>
+                    </ul>
+                    <a href="catalog.html" class="button">Забронировать</a>
+                    </div>
+                </li>
+
+                <li class="slider-rooms-item">
+                    <picture>
+                        <source srcset="images/room3-desktop.jpg" width="600" height="404" media="(min-width: 1200px)">
+                    <img class="slider-img" src="images/room3.jpg" alt="Сьют" width="290" height="192">
+                    </picture>
+                    <div class="room-description">
+                    <h3 class="slider-title">Сьют</h3>
+                    <ul class="room-features">
+                        <li class="room-features-item">Площадь - 1,56 м2</li>
+                        <li class="room-features-item">Размеры (ШхГхВ)
+                            125х125х180 см</li>
+                        <li class="room-features-item">Цена за сутки: 350₽</li>
+                    </ul>
+                    <a href="catalog.html" class="button">Забронировать</a>
+                    </div>
+                </li>
             </ul>
-            <a href="catalog.html" class="button">Забронировать</a>
-        </li>
-        </ul>
+            <div class="buttons">
+            <ul class="rooms-pagination">
+                <li>
+                    <button class="rooms-button rooms-button-active" type="button">
+                        <span class="visually-hidden">Номер Эконом-плюс</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="rooms-button" type="button">
+                        <span class="visually-hidden">Номер Комфорт</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="rooms-button" type="button">
+                        <span class="visually-hidden">Номер Сьют</span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="slider-arrows">
+                <li>
+                    <button class="arrow-btn">
+                        <span class="visually-hidden">Предыдущий слайд</span>
+                        <svg class="prev-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#FF7236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                </li>
+                <li>
+                    <button class="arrow-btn">
+                        <span class="visually-hidden">Следующий слайд</span>
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#FF7236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                </li>
+            </ul>
+            </div>
         </section>
-        <section class="feedbacks" id="feddbacks">
+        <section class="feedbacks" id="feedbacks">
             <h2 class="section-title">Отзывы</h2>
             <ul class="fb-list">
-                <li class="fb-items"><span>Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И мы и котик остались очень довольны!</span></li>
+                <li class="fb-item fb-item-active">
+                    <span>Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И мы и котик остались очень довольны!</span>
+                    <span class="info">
+                        <span class="author">Валерия Гришаева</span>
+                        <span class="date">15 ноября, 2019</span>
+                    </span>
+                </li>
+
+                <li class="fb-item">
+                    <span>Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.</span>
+                    <span class="info">
+                        <span class="author">Екатерина Минаева</span>
+                        <span class="date">10 октября, 2019</span>
+                    </span>
+                </li>
+
+                <li class="fb-item">
+                    <span>Мой кот — настоящая привереда, угодить ему сложно. У меня были особые требования к уходу за ним, и “Котейка” отлично справились. Я часто наблюдал по видео за питомцем со своего телефона, это очень удобно.</span>
+                    <span class="info">
+                        <span class="author">Павел Нечаев</span>
+                        <span class="date">2 августа, 2019</span>
+                    </span>
+                </li>
             </ul>
+            <div class="buttons">
+            <ul class="fb-pagination">
+                <li>
+                    <button class="fb-button fb-button-active" type="button">
+                        <span class="visually-hidden">Отзыв одного клиента</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="fb-button" type="button">
+                        <span class="visually-hidden">Отзыв другого клиента</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="fb-button" type="button">
+                        <span class="visually-hidden">Отзыв третьего клиента</span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="slider-arrows">
+                <li>
+                    <button class="arrow-btn">
+                        <span class="visually-hidden">Предыдущий слайд</span>
+                        <svg class="prev-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#FF7236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                </li>
+                <li>
+                    <button class="arrow-btn">
+                        <span class="visually-hidden">Следующий слайд</span>
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#FF7236" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                </li>
+            </ul>
+        </div>
         </section>
         <section class="contacts" id="contacts">
+            <div class="contacs-wrap">
             <h2 class="section-title">Как нас найти</h2>
             <p class="contact-name">Адрес</p>
             <p class="contact-data">Санкт-Петербург,
@@ -124,25 +236,32 @@
 
             <p class="contact-name">Режим работы</p>
             <p class="contact-data">Ежедневно, с 9:00 до 20:00</p>
-
+            
             <p class="contact-name">Телефон</p>
             <p class="contact-data">8 (800) 333-55-99</p>
 
             <p class="contact-name">E-mail</p>
-            <p class="contact-data contact-data-last">info@cat-hotel.ru</p>
-
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3756755413617!2d30.32257280215276!3d59.93875126235654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1685444337155!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="contact-data contact-data-last">info@cat-hotel.ru</p> 
+            </div>
+            
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3063286524939!2d30.321350590705304!3d59.93856930693347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1685444110552!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
-    <footer><img class="logo" src="images/logo.svg" alt="Логотип">
+    <footer>
+        <div class="footer-wrap">=
+        <img class="logo" src="images/logo.svg" alt="Логотип">
         <ul class="footer-nav">
             <li class="footer-nav-item"><a href="#why" class="footer-nav-link">Почему мы?</a></li>
             <li class="footer-nav-item"><a href="#rooms" class="footer-nav-link">Номера</a></li>
             <li class="footer-nav-item"><a href="#feedbacks" class="footer-nav-link">Отзывы</a></li>
             <li class="footer-nav-item"><a href="#contacts" class="footer-nav-link">Контакты</a></li>
         </ul>
-            <div class="copyright"><p>&copy; 2019 Все права защищены</p>
-                <a href="#">Политика конфиденциальности</a></div>
-        </footer>
+    </div>
+            <div class="copyright">
+                <p>&copy; 2019 Все права защищены</p>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        
+    </footer>
 </body>
 </html>
